@@ -1,6 +1,14 @@
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+
 import streamlit as st
 
 from utils.pdf_reader import extract_text_from_pdf
+from utils.skill_extractor import extract_skills
+from utils.text_similarity import calculate_similarity
+from utils.skill_recommendations import get_recommendation
 from utils.skill_extractor import extract_skills
 from utils.text_similarity import calculate_similarity
 from utils.skill_recommendations import get_recommendation
